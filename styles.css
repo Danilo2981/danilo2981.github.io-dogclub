@@ -1,0 +1,309 @@
+/* styles.css */
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+/* Cabecera y navegación */
+header {
+    height: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .logo-container {
+    width: 3rem;
+    height: 3rem;
+    padding: 1rem 1rem 1rem 10rem;
+    overflow: hidden;
+}
+
+header .logo-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+header .name {
+    display: flex;
+}
+
+header .name h1 {
+    color: #fff;
+    font-size: 1.5rem;
+    padding-top: 0.5rem;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin-right: 10rem;
+}
+
+header nav ul li {
+    padding: 1rem;
+    margin-right: 1rem;
+}
+
+header nav ul li a {
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    header {
+        background-color: black;
+        height: 7.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    header .logo-container {
+        width: 2rem;
+        padding: 0.4rem;
+        overflow: hidden;
+    }
+    
+    header .logo-container img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+    header .name h1 {
+        color: #fff;
+        font-size: 1.2rem;
+        padding: 0;
+    }
+    
+    header nav ul {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    header nav ul li {
+        padding: 0;
+    }
+    
+    header nav ul li a {
+        font-size: 1rem;
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    header nav ul li a:hover {
+        color:bisque;
+        text-decoration: underline;
+    }
+}
+
+/* Secciones */
+section {
+    padding: 2rem;
+}
+
+#about {
+    height: 100vh;
+    margin-top: 0;
+    background-image: url('./assets/img/chewy.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+
+#about h2 {
+    padding-top: 5rem;
+    font-size: 4rem;
+    color: blanchedalmond;
+    margin: 0;
+}
+
+#about p {
+    font-size: 1.1rem;
+    color: blanchedalmond;
+}
+
+/* Contenedor de eventos */
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.event {
+    flex: 1 1 calc(25% - 1rem);
+    background: #f4f4f4;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.event .img-container {
+    width: 100%;
+    /* height: 30rem; */
+    /* padding: 1rem 1rem 1rem 10rem; */
+    overflow: hidden;
+}
+
+.event img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Fechas de eventos */
+.date {
+    font-weight: bold;
+    color: #555;
+    margin-top: 0.5rem;
+}
+
+/* Media queries para diseño responsivo */
+@media (max-width: 768px) {
+    
+    .event {
+        flex: 1 1 calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .event {
+        flex: 1 1 100%;
+    }
+}
+
+/* Galería */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.gallery-item {
+    flex: 1 1 calc(33.333% - 1rem);
+    position: relative;
+    padding-bottom: 33.333%;
+    background: #f4f4f4;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Sección de contacto */
+#contact {
+    background-color: #000;
+    color: #fff;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.map {
+    flex: 1 1 50%;
+    height: 300px;
+    background: #e4e4e4;
+}
+
+.contact-info {
+    flex: 1 1 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.contact-info h3 {
+    margin-top: 0;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    margin-bottom: 0.5rem;
+}
+
+.email {
+    background-color: #222;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+}
+
+/* Media queries para diseño responsivo */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .event {
+        flex: 1 1 calc(50% - 1rem);
+    }
+
+    .gallery-item {
+        flex: 1 1 calc(50% - 1rem);
+        padding-bottom: 50%;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .map, .contact-info {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .event {
+        flex: 1 1 100%;
+    }
+
+    .gallery-item {
+        flex: 1 1 100%;
+        padding-bottom: 100%;
+    }
+}
